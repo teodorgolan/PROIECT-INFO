@@ -1,3 +1,4 @@
+//JavaScript->Full JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     var qtyInput = document.getElementById('qty');
     var newFieldsContainer = document.getElementById('newFields');
@@ -24,12 +25,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         for (var i = 0; i < n; i++) {
             var label = document.createElement('label');
-            label.textContent = `v[${i + 1}]: `;
+            label.textContent = `Numarul ${i + 1}:`;
 
             var input = document.createElement('input');
             input.type = 'number';
             input.name = `input${i}`;
             input.id = `input${i}`;
+            input.min = '0'
 
             newFieldsContainer.appendChild(label);
             newFieldsContainer.appendChild(input);
@@ -85,8 +87,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (c !== 0) {
             resultsContainer.innerHTML = `<p>${c} Este castigatorul</p>`;
+            alert(c+" Este numarul castigatorul!")
         } else {
             resultsContainer.innerHTML = '<p>Nu exista castigator</p>';
+            alert("Nu exista numar castigator!")
         }
     }
 });
+//7e0d05

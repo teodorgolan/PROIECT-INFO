@@ -1,3 +1,4 @@
+//din C++->Java->JavaScript
 const readline = require('readline');
 
 const rl = readline.createInterface({
@@ -65,3 +66,4 @@ rl.question('Introdu valoarea lui n: ', (n) => {
         rl.close();
     }
 });
+//7e0d05
