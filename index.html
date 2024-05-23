@@ -7,12 +7,24 @@
     <title>RomTelekom</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="logo.webp"/>
+    <script src="scripts.js"></script>
   </head>
   <body>
     <header>
-        
+        <img id="logo" src="logo.svg">
     </header>
     <main>
+        <img id="banner" src="banner.jpg">
+        <form>
+            <div>
+                <label for="qty">How many numbers are there?</label>
+                <p></p>
+                <input id="qty" type="number" max="100" min="1"/>
+            </div>
+            <div id="newFields"></div>
+            <button id="submitBtn">Submit</button>
+            <div id="results"></div>
+        </form>
     </main>
   </body>
 </html>

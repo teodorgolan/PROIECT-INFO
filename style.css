@@ -1,18 +1,49 @@
 body {
-    background: #f5f6f7;
+    background: #ffffff;
     color: #1b1b32;
     font-family: Helvetica;
     margin: 0;
   }
-  
-  header {
-    width: 100%;
+header {
+    margin: auto;
+    padding-bottom: 10px;
+    width: 65%;
     height: 50px;
-    background-color: #1b1b32;
+    background-color: #fdfdfd;
     display: flex;
   }
-    
-  h1 {
-    color: #f1be32;
-    font-size: min(5vw, 1.2em);
-  }
+form{
+    background-color: rgba(255, 254, 250, 0.905);
+    padding: 40px;
+    width: 59%;
+    display: block;
+    margin: auto;
+    height: auto;
+    border-radius:  0.25rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(9, 1, 37);    
+}
+input{
+    border-radius:  0.25rem;
+    display: inline-block;
+    padding: 5.5px;
+}
+label{
+    margin-bottom: 0.5rem;
+}
+button{
+    margin-top: 0.5rem;
+    border: 1rem;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 0.25rem;
+}
+.baner{
+    width: 65%;
+    margin: auto;
+    display: block;
+}
+.logo{
+    padding-left: 2px;
+}
