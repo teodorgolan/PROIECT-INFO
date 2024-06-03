@@ -7,7 +7,7 @@ const rl = readline.createInterface({
 });
 
 const v = new Array(101).fill(0); 
-const p = 10;  // Not necessary but declared as per original code
+const p = 10; 
 let c = 0;
 
 rl.question('Introdu valoarea lui n: ', (n) => {
@@ -66,4 +66,4 @@ rl.question('Introdu valoarea lui n: ', (n) => {
         rl.close();
     }
 });
-//7e0d05
+//Sik
