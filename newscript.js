@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     startBtn.addEventListener('click', function() {
         startBtn.parentElement.classList.add('hidden');
         mainIn.parentElement.classList.remove('hidden');
-        updateProgressBar(1);
+        updateProgressBar(25);
     })
 
     nextBtn.addEventListener('click', function() {        
@@ -28,9 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
             createFields(n);
             newFieldsContainer.classList.remove('hidden');
             submitBtn.classList.remove('hidden');
-            updateProgressBar(25);
+            updateProgressBar(50);
         } else {
-            newFieldsContainer.innerHTML = '<p>Vă rugăm să introduceți numărul de numere de telefon.</p>';
+            newFieldsContainer.innerHTML = '<p>Vă rugăm să introduceți un număr valid.</p>';
             newFieldsContainer.classList.remove('hidden');
         }
     });                        
