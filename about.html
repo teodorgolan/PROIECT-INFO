@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Zulu" />
+    <title>Zulu</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;500;800&display=swap" rel="stylesheet">
+    <link rel="icon" href=""/>
+    <link rel="stylesheet" href="/from chicago.css"/>
+</head>
+<body>
+    <header>
+        <a href="/hole in one.html"><h1>Zulu</h1></a>
+        <ul>
+            <li><a href="about.html">Despre</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+    <main id="container1" class="about">
+        <h1>Proiect Informatica</h1>
+        <p>(Problema nr. 17)</p>
+        <h2 class="left">Argument</h2>
+        <p class="left">
+            Am ales aceasta problema deoarece se bazează pe capacitatea ei de a
+            combina aspecte teoretice și practice ale programării într-o manieră accesibilă
+            și provocatoare. Prin rezolvarea acestei probleme, noi ne-am putut dezvolta și
+            rafina abilitățile de bază necesare în cariera noastra profesională. De
+            asemenea, oferă o înțelegere pragmatică a modului în care se pot aborda și
+            soluționa problemele reale cu ajutorul programării.
+        </p>
+        <h2 class="left">Enuntul problemei</h2>
+        <p class="left"><i>
+            Se consideră că într -un oraș există n (n&#8804;100) abonați telefonici ale căror
+            numere de telefon sunt formate din 6 cifre, prima cifră fiind obligatoriu
+            nenulă. Presupunem că regia RomTelecom a organizat un concurs al cărui
+            premiu va fi oferit acelui abonat al său, al cărui număr de telefon respectă
+            următoarele condiții:
+            <li class="left">se află în lista celor n abonați</li>
+            <li class="left">conține doar cifre pare</li>
+            <li class="left">între numerele care respectă primele două condiții va fi ales numărul care este maxim</li>
+        </i></p>
+        <h2 class="left">Descrierea programului</h2>
+        <h3 class="left">Date utilizate</h3>
+            <p class="left">„n” = numarul de numere introduse si verificate</p>
+            <p class="left">„c” = variabila folosita la memorarea celui mai mare numar</p>
+            <p class="left">„v[100]” = vector folosit la determinarea pozitiei unui numar in sir</p>
+            <p class="left">„x” = o copie a numarului prelucrat</p>
+            <p class="left">„p” = o variabila folosita la determinarea ultimei cifre a unui numar</p>
+            <p class="left">„i”, „j”, „h” = numere folosite la scrierea si citirea vectorului v</p>
+        <div class="container2">
+            <pre>
+            <p>#inlcude &lt;iostream&gt;</p>
+            <p>using namespace std;</p>
+            <p>int main()</p>
+            <p>{ int n,x,v[100],p=10,c=10;</p>
+            <p>     cin>>n;</p>
+            <p>     if(n&lt;=100 && n&gt;0){</p>
+            <p>         for(int i=0; i&lt;=n; i++)</p>
+            <p>             cout &lt;&lt; "v["&lt;&lt; i &lt;&lt; "]="; cin &gt;&gt; v[i];</p>
+            <p>         for(int j=1; j&lt;=n; j++){</p>
+            <p>             if(v[j] &gt;= 100000 && v[j] &lt;= 999999){</p>
+            <p>                 x=v[j];</p>
+            <p>                 while(x&gt;0){</p>
+            <p>                     if((x%p)%2==0){</p>
+            <p>                         x=x/10;</p>
+            <p>                     }else{</p>
+            <p>                         v[j]=0;</p>
+            <p>                         break;</p>
+            <p>                      }</p>
+            <p>                 }</p>
+            <p>             }else</p>
+            <p>                 v[j]=0;</p>
+            <p>          }</p>
+            <p>          for(int h=1; h&lt;=n; h++){</p>
+            <p>              if(v[h]&gt;c)</p>
+            <p>                   c=v[h];</p>
+            <p>               }</p>
+            <p>         }</p>
+            <p>     else{</p>
+            <p>         cout&lt;&lt;"NU";</p>
+            <p>     }</p>
+            <p>     if(c!=0){</p>
+            <p>         cout&lt;&lt;c&lt;&lt;"Este castigatorul";</p>
+            <p>     }</p>
+            <p>     else{</p>
+            <p>         cout&lt;&lt;"NU";</p>
+            <p>     }</p>
+            <p>return 0;</p>
+            <p>}</p>
+            </pre>
+        </div>
+        <h3 class="left">Cerinte minime de sistem</h3>
+        <p class="left">
+            Pentru a rula aplicația descrisă, care presupune manipularea și
+            verificarea unor liste de numere de telefon într-un limbaj de
+            programare precum JavaScript/C++, cerințele minimale de sistem
+            sunt relativ modeste. Iată specificațiile necesare pentru un sistem
+            capabil să ruleze eficient o astfel de aplicație:
+            <ol type="1">
+                <li class="left">Procesor Minim: Procesor dual-core de 1 GHz (de exemplu, Intel
+                Core i3 sau echivalent AMD).
+                Recomandat: Procesor quad-core de 2 GHz sau mai rapid (de
+                exemplu, Intel Core i5 sau echivalent AMD).</li>
+                <li class="left">Memorie RAM Minim: 2 GB RAM.Recomandat: 4 GB RAM sau
+                mai mult.</li>
+                <li class="left">Sistem de OperareWindows: Windows 7 sau o versiune
+                ulterioară.macOS: macOS 10.10 (Yosemite) sau o versiune
+                ulterioară.Linux: O distribuție modernă (de exemplu, Ubuntu
+                18.04 sau mai recent, Fedora, Debian).</li>
+                <li class="left">Programe Necesare pentru JavaScript: Este necesar pentru a rula
+                JavaScript în afara unui browser. Descărcați și instalați cea mai
+                recentă versiune JavaScript:Visual Studio.</li>
+                <li class="left">Spațiu de StocareMinim: 500 MB liber pentru instalarea
+                JavaScript și a editorului de text.</li>
+            </ol>
+        </p>
+        <h2 class="left">Utilizarea Aplicatiei</h2>
+        <p class="left">
+            Aplicatia prezentata are multiple utilizări practice, atât pentru
+            utilizatori individuali cât și pentru organizații. În esență, aplicația
+            selectează numărul de telefon câștigător dintr-o listă de abonați,
+            conform unor reguli specifice. Aceasta poate fi folosită într-un
+            context de concurs, dar și în alte scenarii care necesită filtrarea și
+            selecția unor date pe baza anumitor criterii.
+            Prin modificarea criteriilor de selecție, aplicația poate fi ajustată
+            pentru a răspunde nevoilor specifice ale fiecărui domeniu, oferind o
+            soluție automatizată și eficientă pentru filtrarea și selecția datelor.
+        </p>
+        <h2 class="left">Cine poate utiliza aplicatia si in ce scop</h2>
+        <p class="left">
+            Companii de telecomunicații Scop: Organizarea de concursuri pentru
+            abonați, promovarea serviciilor și fidelizarea clienților. 
+        </p>
+        <h2 class="left">Exemplu</h2>
+        <p class="left"> 
+            RomTelecom sau alte companii de telecomunicații pot
+            utiliza aplicația pentru a identifica numărul de telefon câștigător
+            într-un concurs bazat pe anumite criterii (de exemplu, numărul
+            conține doar cifre pare). Organizatori de concursuri și campanii de
+            marketing Scop: Realizarea de extrageri și selecții automate pe baza
+            unor criterii predefinite. Exemplu: Agențiile de marketing pot folosi
+            aplicația pentru a selecta câștigători în campanii promoționale bazate
+            pe date numerice (de exemplu, numere de înregistrare, coduri de
+            participare).
+        </p>
+        <h2 class="left">Modalitati ulterioare de dezvoltare</h2>
+        <p class="left">
+            Aplicația poate fi îmbunătățită și extinsă în mai multe moduri pentru
+            a-i crește funcționalitatea, scalabilitatea și utilitatea. Iată câteva
+            sugestii pentru dezvoltări ulterioare:
+            <li class="left">Implementarea unei interfețe grafice prietenoase pentru
+            utilizator, astfel încât aplicația să fie mai accesibilă celor care
+            nu sunt familiarizați cu linia de comandă.</li>
+            <li class="left">Filtrare avansată: Adăugarea posibilității de a defini criterii
+            de filtrare multiple și complexe (de exemplu, cifre impare,
+            numere care conțin anumite secvențe etc.).Sortare și
+            grupare: Oferirea opțiunii de a sorta și grupa numerele de
+            telefon după diverse criterii înainte de a aplica filtrul.</li>
+            <li class="left">Stocarea datelor într-o bază de date pentru o gestionare mai
+            eficientă a informațiilor despre abonați.</li>
+            <li class="left">Automatizare si Programare: Permițând rularea automată a
+            aplicației la intervale de timp specificate (de exemplu, zilnic,
+            săptămânal).</li>
+            <li class="left">Performanță: Monitorizarea și îmbunătățirea performanței
+            aplicației prin profiling și optimizări codului.</li>
+            <li class="left">Validare: Implementarea unui sistem robust de validare a
+            numerelor de telefon pentru a asigura corectitudinea și
+            integritatea datelor introduse.</li>
+            <li class="left">Securitate: Adăugarea de măsuri de securitate pentru a
+            proteja datele sensibile, cum ar fi criptarea datelor stocate și
+            autentificarea utilizatorilor.</li>
+            <li class="left">Scalabilitate: Optimizarea algoritmilor pentru a gestiona un
+            număr mai mare de abonați (de exemplu, folosirea tehnicilor
+            de paralelizare).</li>
+        </p>
+        <h2 class="left">Bibliografie</h2>
+        <h3>Siteuri pentru documentare:</h3>
+        <p class="left">1.JavaScript</p>
+                <li class="left">MDN Web Docs: Unul dintre cele mai complete și bine documentate site-uri pentru JavaScript</li>
+                <li class="left">W3Schools</li>
+                <li class="left">JavaScript.info: Un ghid modern și cuprinzător pentru învățarea JavaScript-ului, de la bazele limbajului până la concepte avansate.</li>
+        <p class="left">2.C++</p>
+                <li class="left">cppreference.com: O referință detaliată pentrustandardul C++ și biblioteca standard (STL).</li>
+                <li class="left">GeeksforGeeks C++: O platformă educațională care oferă articole, exemple de cod și soluții la probleme comune de programare în C++</li>
+                <li class="left">LearnCpp.com: Un ghid detaliat și structurat pentru învățarea C++, de la concepte de bază până la subiecte avansate.</li>
+        <p class="left">3.Documentare generala si tutoriale:</p>
+                <li class="left">StackOverflow: O comunitate de programatori unde puteți găsi răspunsuri la problemele specifice de programare în JavaScript și C++.</li>
+                <li class="left">GitHub: O platformă pentru găzduirea codului și colaborarea între dezvoltatori, unde puteți găsi proiecte open-source relevante și exemple de implementare.</li>
+    </main>
+    <footer id="f">
+        <div class="wow2">
+                <p>Links</p>
+                <a href="https://github.com/teodorgolan/PROIECT-INFO" target="_blank" rel="noopener noreferrer">Github</a>
+                <p><a href="Documentatie_proiect.pdf" target="_blank" rel="noopener noreferrer">Documentatie</a></p>
+                <h2>©Copyright 2024 by 7e0d05</h2>
+        </div>
+    </footer>
+</body>
+</html>
